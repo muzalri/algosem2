@@ -161,7 +161,7 @@ def add_student():
         message = db_murid.tambah_murid(murid)
         flash(message, 'success' if 'berhasil' in message else 'danger')
         return redirect(url_for('login'))
-    return render_template('index.html')
+    return render_template('add_student.html')
 
 @app.route('/view_students')
 def view_students():
