@@ -160,7 +160,8 @@ def add_student():
         murid = Murid(nama, tanggal_lahir, nik, alamat, email, angkatan)
         message = db_murid.tambah_murid(murid)
         flash(message, 'success' if 'berhasil' in message else 'danger')
-    return render_template('add_student.html')
+        return redirect(url_for('login'))
+    return render_template('index.html')
 
 @app.route('/view_students')
 def view_students():
@@ -203,6 +204,7 @@ def add_admin():
         password = request.form['password']
         message = sistem_login.tambah_admin(username, password)
         flash(message, 'success' if 'berhasil' in message else 'danger')
+        return redirect(url_for('login'))
     return render_template('add_admin.html')
 
 if __name__ == "__main__":
@@ -217,3 +219,6 @@ if __name__ == "__main__":
         print("Admin default sudah ada")
     
     app.run(debug=True)
+    
+    port = int(os.environ.get('PORT', 5000))
+    app.run(host='0.0.0.0', port=port)

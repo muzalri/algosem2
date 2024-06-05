@@ -5,9 +5,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <title>Login</title>
+  
+
 </head>
 <body>
-    <div class="container">
+
+    <form autocomplete='off' class='form' method="POST" action="{{ url_for('login') }}" >
+        <div class='control'>
+          <h1>
+            Sign In
+          </h1>
+        </div>
+        <div class='control block-cube block-input'>
+          <input name='username' placeholder='Username' type='text'>
+          <div class='bg-top'>
+            <div class='bg-inner'></div>
+          </div>
+          <div class='bg-right'>
+            <div class='bg-inner'></div>
+          </div>
+          <div class='bg'>
+            <div class='bg-inner'></div>
+          </div>
+        </div>
+        <div class='control block-cube block-input'>
+          <input name='password' placeholder='Password' type='password'>
+          <div class='bg-top'>
+            <div class='bg-inner'></div>
+          </div>
+          <div class='bg-right'>
+            <div class='bg-inner'></div>
+          </div>
+          <div class='bg'>
+            <div class='bg-inner'></div>
+          </div>
+        </div>
+        <button class='btn block-cube block-cube-hover' type="submit">
+          <div class='bg-top'>
+            <div class='bg-inner'></div>
+          </div>
+          <div class='bg-right'>
+            <div class='bg-inner'></div>
+          </div>
+          <div class='bg'>
+            <div class='bg-inner'></div>
+          </div>
+          <div class='text'>
+            Log In
+          </div>
+        </button>
+
+      </form>
+      
+    <!-- <div class="container">
         <h1>Login</h1>
         <form method="POST" action="{{ url_for('login') }}">
             <label for="username">Username</label>
@@ -16,6 +66,8 @@
             <input type="password" id="password" name="password" required>
             <button type="submit">Login</button>
         </form>
-    </div>
+    </div> -->
 </body>
+
+
 </html>

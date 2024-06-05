@@ -8,8 +8,105 @@
 </head>
 <body>
     <div class="container">
-        <h1>Add Student</h1>
-        <form method="POST" action="{{ url_for('add_student') }}">
+        
+
+        <form autocomplete='off' class='form' method="POST" action="{{ url_for('add_student') }}" >
+            <div class='control'>
+              <h1>
+                Add Student
+              </h1>
+            </div>
+            <div class='control block-cube block-input'>
+              <input name='nama' placeholder='Name' type='text'>
+              <div class='bg-top'>
+                <div class='bg-inner'></div>
+              </div>
+              <div class='bg-right'>
+                <div class='bg-inner'></div>
+              </div>
+              <div class='bg'>
+                <div class='bg-inner'></div>
+              </div>
+            </div>
+            <div class='control block-cube block-input'>
+                <input type="text" id="tanggal_lahir" name="tanggal_lahir" placeholder="Date Birth (dd-mm-yyyy)">
+                <div class='bg-top'>
+                  <div class='bg-inner'></div>
+                </div>
+                <div class='bg-right'>
+                  <div class='bg-inner'></div>
+                </div>
+                <div class='bg'>
+                  <div class='bg-inner'></div>
+                </div>
+              </div>
+              <div class='control block-cube block-input'>
+                <input id="nik" name='nik' placeholder='Nik' type='text'>
+                <div class='bg-top'>
+                  <div class='bg-inner'></div>
+                </div>
+                <div class='bg-right'>
+                  <div class='bg-inner'></div>
+                </div>
+                <div class='bg'>
+                  <div class='bg-inner'></div>
+                </div>
+              </div>
+              <div class='control block-cube block-input'>
+                <input name='alamat' id="alamat" placeholder='Addres' type='text'>
+                <div class='bg-top'>
+                  <div class='bg-inner'></div>
+                </div>
+                <div class='bg-right'>
+                  <div class='bg-inner'></div>
+                </div>
+                <div class='bg'>
+                  <div class='bg-inner'></div>
+                </div>
+              </div>
+              <div class='control block-cube block-input'>
+                <input name='email' id="email" placeholder='Email'  type='email'>
+                <div class='bg-top'>
+                  <div class='bg-inner'></div>
+                </div>
+                <div class='bg-right'>
+                  <div class='bg-inner'></div>
+                </div>
+                <div class='bg'>
+                  <div class='bg-inner'></div>
+                </div>
+              </div>
+              <div class='control block-cube block-input'>
+                <input name='angkatan' id="angkatan" placeholder='Angkatan' type='text'>
+                <div class='bg-top'>
+                  <div class='bg-inner'></div>
+                </div>
+                <div class='bg-right'>
+                  <div class='bg-inner'></div>
+                </div>
+                <div class='bg'>
+                  <div class='bg-inner'></div>
+                </div>
+              </div>
+           
+            <button class='btn block-cube block-cube-hover' type="submit">
+              <div class='bg-top'>
+                <div class='bg-inner'></div>
+              </div>
+              <div class='bg-right'>
+                <div class='bg-inner'></div>
+              </div>
+              <div class='bg'>
+                <div class='bg-inner'></div>
+              </div>
+              <div class='text'>
+                Submit
+              </div>
+            </button>
+
+
+
+        <!-- <form method="POST" action="{{ url_for('add_student') }}">
             <label for="nama">Nama</label>
             <input type="text" id="nama" name="nama" required>
             <label for="tanggal_lahir">Tanggal Lahir (dd-mm-yyyy)</label>
@@ -23,7 +120,7 @@
             <label for="angkatan">Angkatan</label>
             <input type="text" id="angkatan" name="angkatan" required>
             <button type="submit">Add Student</button>
-        </form>
+        </form> -->
     </div>
 </body>
 </html>
