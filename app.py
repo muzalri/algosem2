@@ -210,7 +210,7 @@ if __name__ == "__main__":
     db_murid = DatabaseMurid()
 
     # Tambah admin default jika belum ada
-    if not sistem_login.admins:
+    if "1" not in sistem_login.admins:
         print("Menambahkan admin default")
         sistem_login.tambah_admin("1", "1")
     else:
